@@ -1,0 +1,90 @@
+{% extends 'film/base.html' %}
+
+{% block title %}FilmLog | Temukan Film Favoritmu{% endblock %}
+
+{% block content %}
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #4E6688, #6A8EAA);
+        color: white;
+        padding: 80px 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .film-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+
+    .film-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .film-title {
+        font-weight: 600;
+    }
+
+    .film-image {
+        width: 100%;
+        height: 180px; 
+        object-fit: contain;
+        background-color: #f8f9fa; 
+    }
+
+    .btn-detail {
+    background-color: #4E6688 !important;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+    }
+
+    .btn-detail:hover {
+        background-color: #557b94 !important;
+    }
+
+</style>
+
+<!-- Hero Section -->
+<div class="hero-section mb-5">
+    <h1 class="display-5 fw-bold">Selamat Datang di 🎬 FilmLog</h1>
+    <p class="lead">Platform terbaik untuk menjelajahi dan mengulas film favoritmu.</p>
+    {% if user.is_authenticated and not user.is_staff and user.username != 'admin' %}
+        <p class="mt-3">Halo, <strong>{{ user.username }}</strong>! Yuk, lihat film terbaru di bawah ini.</p>
+    {% elif user.is_authenticated and user.is_staff %}
+        <p class="mt-3 text-muted">Anda login sebagai admin.</p>
+    {% endif %}
+
+</div>
+
+<!-- Film List -->
+<h2 class="mb-4 text-center">📽️ Koleksi Film</h2>
+<div class="row">
+    {% for film in films %}
+        <div class="col-md-4 mb-4">
+            <div class="card film-card h-100 shadow-sm">
+                {% if film.cover_image %}
+                    <img src="{{ film.cover_image.url }}" class="film-image w-100" alt="Poster {{ film.title }}">
+                {% else %}
+                    <img src="https://via.placeholder.com/400x250?text=No+Image" class="film-image w-100" alt="No Image">
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="film-title">{{ film.title }}</h5>
+                    <p class="text-muted">{{ film.description|truncatewords:20 }}</p>
+                    <a href="{% url 'film_detail' film.id %}" class="btn btn-detail mt-auto">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p class="text-center text-muted">Belum ada film tersedia saat ini.</p>
+    {% endfor %}
+</div>
+{% endblock %}

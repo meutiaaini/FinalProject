@@ -1,0 +1,97 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}FilmLog Admin{% endblock %}
+
+{% block branding %}
+  <style>
+    /* FilmLog Admin Theme Matching User Side */
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    #header {
+      background: linear-gradient(135deg, #4E6688, #6A8EAA);
+      border-bottom: 3px solid #88B2CE;
+    }
+
+    #branding h1,
+    #branding h1 a {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .module caption,
+    .inline-group h2,
+    .module h2 {
+      background-color: #e3ecf5;
+      color: #4E6688;
+      font-weight: 600;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .button,
+    input[type="submit"],
+    .submit-row input {
+      background-color: #4E6688 !important;
+      color: #fff !important;
+      border-radius: 4px;
+      padding: 6px 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover,
+    input[type="submit"]:hover {
+      background-color: #39526b !important;
+    }
+
+    .breadcrumbs {
+      background-color: #f1f5f9;
+      border: 1px solid #d8e0e7;
+    }
+
+    #footer {
+      background-color: #4E6688;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+
+    /* Tambahan styling untuk daftar review agar lebih clean */
+    .results table {
+      background-color: #fff;
+      border: 1px solid #d8e0e7;
+    }
+
+    .results th,
+    .results td {
+      border-bottom: 1px solid #e0e6ec !important;
+      padding: 8px 10px !important;
+    }
+
+    .results th {
+      background-color: #e3ecf5 !important;
+      color: #4E6688;
+      font-weight: bold;
+    }
+
+    .results td a {
+      color: #4E6688 !important;
+      font-weight: 500;
+    }
+
+    .action-checkbox {
+      accent-color: #4E6688;
+    }
+  </style>
+
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">🎬 FilmLog Admin</a></h1>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'film/base.html' %}
+
+{% block title %}Daftar | FilmLog{% endblock %}
+
+{% block content %}
+<style>
+.btn-primary {
+    background-color: #4E6688;
+    border-color: #4E6688;
+}
+
+.btn-primary:hover {
+    background-color: #3b526c;
+    border-color: #3b526c;
+}
+</style>
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 85vh;">
+    <div class="card shadow p-4" style="max-width: 480px; width: 100%; border-radius: 16px;">
+        <h2 class="text-center mb-3">📝 Daftar Akun Baru</h2>
+        <p class="text-center text-muted mb-4">Gabung dan mulai ulas film favoritmu sekarang!</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mb-3">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger small">
+                            {{ field.errors|striptags }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary w-100">Daftar</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <small>Sudah punya akun? <a href="{% url 'login' %}">Login di sini</a></small>
+        </div>
+    </div>
+</div>
+{% endblock %}

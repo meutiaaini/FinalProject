@@ -1,0 +1,477 @@
+/* ===== FilmLog Jazzmin Custom Theme ===== */
+
+:root {
+  --filmlog-primary: #4E6688;
+  --filmlog-secondary: #6A8EAA;
+  --filmlog-accent: #88B2CE;
+  --filmlog-light: #f8f9fa;
+  --filmlog-dark: #2c3e50;
+  --filmlog-gradient: linear-gradient(135deg, #4E6688, #6A8EAA);
+  --filmlog-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== NAVBAR & HEADER ===== */
+.main-header.navbar {
+  background: var(--filmlog-gradient) !important;
+  border-bottom: none;
+  box-shadow: var(--filmlog-shadow);
+}
+
+.navbar-brand, .navbar-brand:hover {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+}
+
+/* ===== SIDEBAR ===== */
+.main-sidebar {
+  background: var(--filmlog-gradient) !important;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-link {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-link .brand-text {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Sidebar Navigation */
+.nav-sidebar .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 0.5rem;
+  margin: 2px 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-sidebar .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  transform: translateX(3px);
+}
+
+.nav-sidebar .nav-item.menu-is-opening > .nav-link,
+.nav-sidebar .nav-item.menu-open > .nav-link {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* Active menu item */
+.nav-sidebar .nav-item .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu icons */
+.nav-sidebar .nav-icon {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+/* User panel */
+.user-panel {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+}
+
+.user-panel .info a {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* ===== MAIN CONTENT ===== */
+.content-wrapper {
+  background-color: var(--filmlog-light) !important;
+  min-height: calc(100vh - 60px);
+}
+
+/* Content Header */
+.content-header {
+  background: white;
+  border-radius: 0.5rem;
+  margin: 15px;
+  padding: 20px;
+  box-shadow: var(--filmlog-shadow);
+}
+
+.content-header h1 {
+  color: var(--filmlog-primary);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: var(--filmlog-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: var(--filmlog-primary);
+  font-weight: 500;
+}
+
+/* ===== CARDS & BOXES ===== */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: var(--filmlog-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: var(--filmlog-gradient) !important;
+  color: white !important;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+  font-weight: 600;
+  border-bottom: none;
+  padding: 15px 20px;
+}
+
+.card-title {
+  color: white !important;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-body {
+  padding: 20px;
+  background: white;
+}
+
+/* Info boxes */
+.info-box {
+  border-radius: 0.75rem;
+  box-shadow: var(--filmlog-shadow);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-box-icon {
+  background: var(--filmlog-gradient) !important;
+  color: white !important;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background: var(--filmlog-gradient) !important;
+  border: none !important;
+  border-radius: 0.5rem;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #39526b, #5a7a96) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white !important;
+}
+
+.btn-secondary {
+  background-color: var(--filmlog-accent) !important;
+  border-color: var(--filmlog-accent) !important;
+  border-radius: 0.5rem;
+  color: white !important;
+}
+
+.btn-secondary:hover {
+  background-color: #7ba5c1 !important;
+  border-color: #7ba5c1 !important;
+  color: white !important;
+}
+
+/* Action buttons */
+.btn-outline-primary {
+  color: var(--filmlog-primary) !important;
+  border-color: var(--filmlog-primary) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--filmlog-primary) !important;
+  border-color: var(--filmlog-primary) !important;
+  color: white !important;
+}
+
+/* Add/Change buttons di dashboard */
+.btn-success, .addlink {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: white !important;
+  border-radius: 0.5rem;
+  padding: 6px 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover, .addlink:hover {
+  background-color: #218838 !important;
+  border-color: #218838 !important;
+  color: white !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.changelink {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #212529 !important;
+  border-radius: 0.5rem;
+  padding: 6px 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.changelink:hover {
+  background-color: #e0a800 !important;
+  border-color: #e0a800 !important;
+  color: #212529 !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button group untuk Add/Change */
+.btn-group .btn {
+  margin-right: 5px;
+}
+
+/* Tombol di dalam card */
+.card-body .btn, .card-body .addlink, .card-body .changelink {
+  margin: 2px;
+  font-size: 0.875rem;
+}
+
+/* ===== TABLES ===== */
+.table {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--filmlog-shadow);
+}
+
+.table thead th {
+  background: var(--filmlog-gradient);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 15px 12px;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(78, 102, 136, 0.05);
+}
+
+/* ===== FORMS ===== */
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--filmlog-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(106, 142, 170, 0.25);
+}
+
+.form-group label {
+  color: var(--filmlog-primary);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--filmlog-secondary) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--filmlog-primary) !important;
+  text-decoration: underline;
+}
+
+/* ===== ALERTS ===== */
+.alert {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 15px 20px;
+  border-left: 4px solid;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+  color: #155724;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-left-color: var(--filmlog-secondary);
+  color: var(--filmlog-primary);
+}
+
+/* ===== DASHBOARD WIDGETS ===== */
+.small-box {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--filmlog-shadow);
+  transition: all 0.3s ease;
+}
+
+.small-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.small-box > .inner {
+  padding: 20px;
+}
+
+.small-box .icon {
+  font-size: 70px;
+  opacity: 0.8;
+}
+
+/* ===== FOOTER ===== */
+.main-footer {
+  background: var(--filmlog-primary) !important;
+  color: white !important;
+  border-top: none;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-footer a {
+  color: var(--filmlog-accent) !important;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-page {
+  background: var(--filmlog-gradient) !important;
+}
+
+.login-box {
+  margin-top: 5%;
+}
+
+.card.card-outline.card-primary {
+  border-top: 3px solid var(--filmlog-primary) !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-logo a {
+  color: white !important;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .content-header {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .content-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .card-header {
+    padding: 12px 15px;
+  }
+  
+  .info-box:hover {
+    transform: none;
+  }
+  
+  .small-box:hover {
+    transform: none;
+  }
+}
+
+/* ===== CUSTOM ANIMATIONS ===== */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.nav-sidebar .nav-item {
+  animation: slideInFromLeft 0.3s ease forwards;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--filmlog-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--filmlog-primary);
+}
