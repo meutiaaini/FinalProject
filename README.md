@@ -3,7 +3,7 @@
 Film Log adalah aplikasi web sederhana berbasis Django yang memungkinkan pengguna umum untuk melihat daftar dan detail film, serta menyediakan dashboard khusus admin untuk mengelola data film, genre, dan ulasan (review).
 
 ## 📺 Demo Aplikasi (YouTube)
-Tonton video demo di YouTube:
+Tonton video demo di YouTube: https://youtu.be/H4Vb64R20lo
 
 ## 💡 Fitur Utama
 ### 🎯 Untuk User Umum
